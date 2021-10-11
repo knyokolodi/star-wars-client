@@ -6,6 +6,12 @@ export const StyledFormControl = styled(FormControl)`
   border-color: #1f1f1f;
   border-radius: 0;
   color: #ccc;
+  &:focus {
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+    border-radius: 0;
+    color: #ccc;
+  }
 `;
 
 export const StyledButton = styled(Button)`

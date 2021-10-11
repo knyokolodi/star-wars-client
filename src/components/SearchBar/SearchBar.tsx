@@ -1,11 +1,11 @@
-import { MouseEventHandler, useState } from 'react';
+import { MouseEventHandler, ChangeEvent, useState } from 'react';
 import { useHistory } from 'react-router';
 import { Form } from 'react-bootstrap';
 
 import { StyledFormControl, StyledButton } from './SearchBar.Styled';
 
 const SearchBar = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState<string>('');
 
   const history = useHistory();
 
@@ -21,7 +21,7 @@ const SearchBar = () => {
         placeholder='Persons Name'
         className='mr-2'
         aria-label='Search'
-        onChange={(e: any) => setSearch(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
       />
       <StyledButton variant='outline-success' onClick={searchMovieHandler}>
         Search
